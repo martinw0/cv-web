@@ -101,4 +101,51 @@ html {
   margin-top: 2px;
 }
 
+.content {
+  background-color: #F4FBFE;
+  text-align: center;
+}
+.content h2 {
+  color: #24468F;
+  text-transform: uppercase;
+}
+.content p {
+  color: #24468F;
+}
+.content .triangle {
+  position: relative;
+  margin-bottom: 50px;
+}
+.content .triangle button {
+  border: 3px solid #24468F;
+  border-radius: 20px;
+  padding: 5px 10px;
+  background: none;
+}
+.content .triangle button:nth-of-type(1) {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+.content .triangle button:nth-of-type(2) {
+  position: absolute;
+  left: 15%;
+  transform: translate(-50%);
+}
+.content .triangle button:nth-of-type(3) {
+  position: absolute;
+  left: 85%;
+  transform: translate(-50%);
+}
+.content .triangle .inactive-buttons {
+  border: 1px solid #707070;
+}
+.content .triangle img {
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+  padding-top: 35px;
+  padding-bottom: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */
