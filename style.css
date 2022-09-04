@@ -104,13 +104,28 @@ html {
 .content {
   background-color: #F4FBFE;
   text-align: center;
+  padding: 20px 20px;
+}
+.content .card {
+  background-color: #E6F0FF;
+  border-radius: 10px;
+  padding: 15px;
+}
+.content .card p {
+  text-align: left;
+  color: #4191B5;
+  font-size: 1.3rem;
 }
 .content h2 {
   color: #24468F;
   text-transform: uppercase;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
 }
 .content p {
   color: #24468F;
+  margin-bottom: 20px;
+  font-size: 2rem;
 }
 .content .triangle {
   position: relative;
@@ -142,10 +157,10 @@ html {
 }
 .content .triangle img {
   display: block;
-  width: 250px;
+  width: 220px;
   margin: 0 auto;
-  padding-top: 35px;
-  padding-bottom: 5px;
+  padding-top: 40px;
+  padding-bottom: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
