@@ -124,12 +124,12 @@ html {
 }
 .content p {
   color: #24468F;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 2rem;
 }
 .content .triangle {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 65px;
 }
 .content .triangle button {
   border: 3px solid #24468F;
