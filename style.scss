@@ -131,6 +131,22 @@ html {
             color: $pale-blue;
             font-size: 1.3rem;
         }
+        .selector {
+            position: relative;
+            .line {
+                position: absolute;
+                top: 4px;
+                border-bottom: 2px solid $pale-blue;
+                width: 50px;
+            }
+            .circle {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $pale-blue;
+            }
+        }
     }
     h2 {
         color: $marine-blue;
