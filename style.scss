@@ -133,11 +133,14 @@ html {
         }
         .selector {
             position: relative;
+            width: 150px;
+            height: 13px;
+            margin: 0 auto;
             .line {
                 position: absolute;
-                top: 4px;
+                top: 6px;
                 border-bottom: 2px solid $pale-blue;
-                width: 50px;
+                width: 100%;
             }
             .circle {
                 position: absolute;
@@ -145,6 +148,23 @@ html {
                 height: 8px;
                 border-radius: 50%;
                 background-color: $pale-blue;
+                top: 50%;
+            }
+            .circle.active {
+                width: 13px;
+                height: 13px;
+            }
+            div:nth-child(2) {
+                left: 0;
+                transform: translateY(-50%);
+            }
+            div:nth-child(3) {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            div:nth-child(4) {
+                left: 100%;
+                transform: translate(-100%, -50%)
             }
         }
     }
