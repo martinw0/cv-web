@@ -1,0 +1,99 @@
+$pale-blue: #4191B5;
+$light-green: #04D596;
+$dark-blue: #161430;
+$marine-blue: #24468F;
+$very-lght-blue: #F4FBFE;
+$light-grey: #707070;
+$grayish-blue: #E6F0FF;
+.content {
+    .card {
+        p {
+            text-align: left;
+            color: $pale-blue;
+            font-size: 1.3rem;
+        }
+        .selector {
+            position: relative;
+            width: 110px;
+            height: 13px;
+            margin: 0 auto;
+            .line {
+                position: absolute;
+                top: 6px;
+                border-bottom: 2px solid $pale-blue;
+                width: 100%;
+            }
+            .circle {
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                border-radius: 50%;
+                background-color: $pale-blue;
+                top: 50%;
+            }
+            .circle.active {
+                width: 13px;
+                height: 13px;
+            }
+            div:nth-child(2) {
+                left: 0;
+                transform: translateY(-50%);
+            }
+            div:nth-child(3) {
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            div:nth-child(4) {
+                left: 100%;
+                transform: translate(-100%, -50%)
+            }
+        }
+    }
+    h2 {
+        color: $marine-blue;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+    }
+    p {
+        color: $marine-blue;
+        margin-bottom: 30px;
+        font-size: 2rem;
+    }
+    .triangle {
+        position: relative;
+        margin-bottom: 65px;
+        button {
+            border: 3px solid $marine-blue;
+            border-radius: 20px;
+            padding: 5px 10px;
+            background: none;
+            color: black;
+            &:nth-of-type(1) {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%);
+            }
+            &:nth-of-type(2) {
+                position: absolute;
+                left: 15%;
+                transform: translate(-50%);
+            }
+            &:nth-of-type(3) {
+                position: absolute;
+                left: 85%;
+                transform: translate(-50%);
+            }
+        }
+        .inactive-buttons {
+            border: 1px solid $light-grey;
+        }
+        img {
+            display: block;
+            width: 220px;
+            margin: 0 auto;
+            padding-top: 40px;
+            padding-bottom: 10px;
+        }
+    }
+}
