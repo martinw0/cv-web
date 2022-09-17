@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState,useRef} from 'react';
 import name from './images/name.png';
 import './style.css';
 import AboutMe from './AboutMe';
@@ -6,23 +6,28 @@ import Experiences from './Experiences';
 import Contact from './Contact';
 
 function App() {
+  const refContent = useRef(null);
+  const executeScroll = () => refContent.current.scrollIntoView();
   const [aboutMeSelected, setAboutMeSelected] = useState(true);
   const handleClickAboutMe = event => {
     setAboutMeSelected(true);
     setExperiencesSelected(false);
     setContactSelected(false);
+    executeScroll();
   };
   const [experiencesSelected, setExperiencesSelected] = useState(false);
   const handleClickExperiences = event => {
     setExperiencesSelected(true);
     setAboutMeSelected(false);
     setContactSelected(false);
+    executeScroll();
   };
   const [contactSelected, setContactSelected] = useState(false);
   const handleClickContact = event => {
     setContactSelected(true);
     setAboutMeSelected(false);
     setExperiencesSelected(false);
+    executeScroll();
   };
   return (
     <div className="App">
@@ -64,9 +69,11 @@ function App() {
           </ul>
         </div>
       </header>
-      {aboutMeSelected && <AboutMe />}
-      {experiencesSelected && <Experiences />}
-      {contactSelected && <Contact />}
+      <div ref={refContent}>
+        {aboutMeSelected && <AboutMe />}
+        {experiencesSelected && <Experiences />}
+        {contactSelected && <Contact />}
+      </div>
     </div>
 
   );
