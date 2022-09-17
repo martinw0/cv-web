@@ -87,6 +87,9 @@ $grayish-blue: #E6F0FF;
         }
         .inactive-buttons {
             border: 1px solid $light-grey;
+            &:hover {
+                cursor: pointer;
+            }
         }
         img {
             display: block;

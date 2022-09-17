@@ -31,6 +31,7 @@ html {
   text-transform: uppercase;
   font-size: 1.5rem;
   font-weight: 500;
+  padding: 10px;
 }
 .header nav ul li:hover {
   cursor: pointer;

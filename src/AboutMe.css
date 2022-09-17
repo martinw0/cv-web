@@ -79,6 +79,9 @@
 .content .triangle .inactive-buttons {
   border: 1px solid #707070;
 }
+.content .triangle .inactive-buttons:hover {
+  cursor: pointer;
+}
 .content .triangle img {
   display: block;
   width: 220px;
