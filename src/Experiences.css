@@ -77,5 +77,32 @@
   color: #F4FBFE;
   background-color: #161430;
 }
+.content.experiences .card {
+  margin: 20px auto;
+}
+.content.experiences .card h3 {
+  text-transform: uppercase;
+  color: #161430;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.content.experiences .card .graph .bar {
+  height: 80px;
+  width: 30px;
+  position: relative;
+}
+.content.experiences .card .graph .bar .gauge-bg {
+  height: 100%;
+  background-color: #24468F;
+  opacity: 18%;
+  border-radius: 5px;
+}
+.content.experiences .card .graph .bar .gauge {
+  height: 70%;
+  background-color: #FF7A23;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 0;
+}
 
 /*# sourceMappingURL=Experiences.css.map */

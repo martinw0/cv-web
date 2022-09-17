@@ -85,4 +85,33 @@ $grayish-blue: #E6F0FF;
             background-color: $dark-blue;
         }
     }
+    .card {
+        margin: 20px auto;
+        h3 {
+            text-transform: uppercase;
+            color: $dark-blue;
+            font-size: 1.6rem;
+            font-weight: 500;
+        }
+        .graph {
+            .bar {
+                height: 80px;
+                width: 30px;
+                position: relative;
+                .gauge-bg {
+                    height: 100%;
+                    background-color: $marine-blue;
+                    opacity: 18%;
+                    border-radius: 5px;
+                }
+                .gauge {
+                    height: 70%;
+                    background-color: #FF7A23;
+                    border-radius: 5px;
+                    position: absolute;
+                    bottom: 0;
+                }
+            }
+        }
+    }
 }

@@ -21,6 +21,32 @@ function Experiences() {
         <button onClick={() => stepSelected===3 ? null : setStepSelected(stepSelected+1)}>Next</button>
       </div>
       <Paragraph step={stepSelected} />
+      <div className='card'>
+        <h3>Database skills</h3>
+        <div className='graph'>
+          <div className='bar mysql'>
+            <div className='gauge-bg'></div>
+            <div className='gauge'></div>
+            <p>MySQL</p>
+          </div>
+          <div className='bar postgresql'>
+            <div className='gauge-bg'></div>
+            <div className='gauge'></div>
+            <p>PostgreSQL</p>
+          </div>
+          <div className='bar mongodb'>
+            <div className='gauge-bg'></div>
+            <div className='gauge'></div>
+            <p>MongoDB</p>
+          </div>
+        </div>
+      </div>
+      <div className='card'>
+        <h3>Web skills</h3>
+      </div>
+      <div className='card'>
+        <h3>System skills</h3>
+      </div>
     </div>
   )
 }
