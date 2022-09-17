@@ -1,0 +1,88 @@
+$pale-blue: #4191B5;
+$light-green: #04D596;
+$dark-blue: #161430;
+$marine-blue: #24468F;
+$very-lght-blue: #F4FBFE;
+$light-grey: #707070;
+$grayish-blue: #E6F0FF;
+.content.experiences {
+    .img-container {
+        width: 300px;
+        margin: 30px auto;
+        &.step1 {
+            max-height: 130px;
+            overflow: hidden;
+        }
+        &.step2 {
+            max-height: 265px;
+            overflow: hidden;
+        }
+        &.step3 {
+            max-height: none;
+        }
+    }
+    p {
+        text-align: left;
+        color: $pale-blue;
+        font-size: 1.3rem;
+    }
+    .selector {
+        position: relative;
+        width: 90px;
+        height: 13px;
+        margin: 0 auto;
+        .line {
+            position: absolute;
+            top: 6px;
+            border-bottom: 2px solid $dark-blue;
+            width: 100%;
+        }
+        .circle {
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: $dark-blue;
+            top: 50%;
+        }
+        .circle.active {
+            width: 13px;
+            height: 13px;
+        }
+        div:nth-child(2) {
+            left: 0;
+            transform: translateY(-50%);
+        }
+        div:nth-child(3) {
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        div:nth-child(4) {
+            left: 100%;
+            transform: translate(-100%, -50%)
+        }
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        margin: 30px auto;
+        button {
+            height: 60px;
+            width: 160px;
+            border-radius: 24px;
+            border: 3px solid $dark-blue;
+            font-size: 1.6rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        button:nth-child(1) {
+            background-color: transparent;
+            color: $dark-blue;
+        }
+        button:nth-child(2)  {
+            color: $very-lght-blue;
+            background-color: $dark-blue;
+        }
+    }
+}

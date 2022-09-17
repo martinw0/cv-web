@@ -9,7 +9,7 @@ function AboutMe() {
         setItemSelected(name);
     };
     return(
-        <div className='content'>
+        <div className='content aboutme'>
             <h2>About me</h2>
             <p>Three things that makes me</p>
             <div class="triangle">

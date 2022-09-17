@@ -126,6 +126,12 @@ html {
     background-color: $very-lght-blue;
     text-align: center;
     padding: 20px 20px;
+    h2 {
+        color: $marine-blue;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        font-size: 1.8rem;
+    }
     .card {
         background-color: $grayish-blue;
         border-radius: 10px;

@@ -1,0 +1,81 @@
+.content.experiences .img-container {
+  width: 300px;
+  margin: 30px auto;
+}
+.content.experiences .img-container.step1 {
+  max-height: 130px;
+  overflow: hidden;
+}
+.content.experiences .img-container.step2 {
+  max-height: 265px;
+  overflow: hidden;
+}
+.content.experiences .img-container.step3 {
+  max-height: none;
+}
+.content.experiences p {
+  text-align: left;
+  color: #4191B5;
+  font-size: 1.3rem;
+}
+.content.experiences .selector {
+  position: relative;
+  width: 90px;
+  height: 13px;
+  margin: 0 auto;
+}
+.content.experiences .selector .line {
+  position: absolute;
+  top: 6px;
+  border-bottom: 2px solid #161430;
+  width: 100%;
+}
+.content.experiences .selector .circle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #161430;
+  top: 50%;
+}
+.content.experiences .selector .circle.active {
+  width: 13px;
+  height: 13px;
+}
+.content.experiences .selector div:nth-child(2) {
+  left: 0;
+  transform: translateY(-50%);
+}
+.content.experiences .selector div:nth-child(3) {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.content.experiences .selector div:nth-child(4) {
+  left: 100%;
+  transform: translate(-100%, -50%);
+}
+.content.experiences .buttons {
+  display: flex;
+  justify-content: space-around;
+  margin: 30px auto;
+}
+.content.experiences .buttons button {
+  height: 60px;
+  width: 160px;
+  border-radius: 24px;
+  border: 3px solid #161430;
+  font-size: 1.6rem;
+}
+.content.experiences .buttons button:hover {
+  cursor: pointer;
+}
+.content.experiences .buttons button:nth-child(1) {
+  background-color: transparent;
+  color: #161430;
+}
+.content.experiences .buttons button:nth-child(2) {
+  color: #F4FBFE;
+  background-color: #161430;
+}
+
+/*# sourceMappingURL=Experiences.css.map */

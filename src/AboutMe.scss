@@ -5,7 +5,7 @@ $marine-blue: #24468F;
 $very-lght-blue: #F4FBFE;
 $light-grey: #707070;
 $grayish-blue: #E6F0FF;
-.content {
+.content.aboutme {
     .card {
         p {
             text-align: left;
@@ -48,12 +48,6 @@ $grayish-blue: #E6F0FF;
                 transform: translate(-100%, -50%)
             }
         }
-    }
-    h2 {
-        color: $marine-blue;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        font-size: 1.8rem;
     }
     p {
         color: $marine-blue;

@@ -110,6 +110,12 @@ html {
   text-align: center;
   padding: 20px 20px;
 }
+.content h2 {
+  color: #24468F;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+}
 .content .card {
   background-color: #E6F0FF;
   border-radius: 10px;

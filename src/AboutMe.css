@@ -1,21 +1,21 @@
-.content .card p {
+.content.aboutme .card p {
   text-align: left;
   color: #4191B5;
   font-size: 1.3rem;
 }
-.content .card .selector {
+.content.aboutme .card .selector {
   position: relative;
   width: 110px;
   height: 13px;
   margin: 0 auto;
 }
-.content .card .selector .line {
+.content.aboutme .card .selector .line {
   position: absolute;
   top: 6px;
   border-bottom: 2px solid #4191B5;
   width: 100%;
 }
-.content .card .selector .circle {
+.content.aboutme .card .selector .circle {
   position: absolute;
   width: 8px;
   height: 8px;
@@ -23,76 +23,70 @@
   background-color: #4191B5;
   top: 50%;
 }
-.content .card .selector .circle.active {
+.content.aboutme .card .selector .circle.active {
   width: 13px;
   height: 13px;
 }
-.content .card .selector div:nth-child(2) {
+.content.aboutme .card .selector div:nth-child(2) {
   left: 0;
   transform: translateY(-50%);
 }
-.content .card .selector div:nth-child(3) {
+.content.aboutme .card .selector div:nth-child(3) {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.content .card .selector div:nth-child(4) {
+.content.aboutme .card .selector div:nth-child(4) {
   left: 100%;
   transform: translate(-100%, -50%);
 }
-.content h2 {
-  color: #24468F;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  font-size: 1.8rem;
-}
-.content p {
+.content.aboutme p {
   color: #24468F;
   margin-bottom: 30px;
   font-size: 2rem;
 }
-.content .triangle {
+.content.aboutme .triangle {
   position: relative;
   margin-bottom: 65px;
 }
-.content .triangle button {
+.content.aboutme .triangle button {
   border: 3px solid #24468F;
   border-radius: 20px;
   padding: 5px 10px;
   background: none;
   color: black;
 }
-.content .triangle button:nth-of-type(1) {
+.content.aboutme .triangle button:nth-of-type(1) {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
 }
-.content .triangle button:nth-of-type(2) {
+.content.aboutme .triangle button:nth-of-type(2) {
   position: absolute;
   left: 15%;
   transform: translate(-50%);
 }
-.content .triangle button:nth-of-type(3) {
+.content.aboutme .triangle button:nth-of-type(3) {
   position: absolute;
   left: 85%;
   transform: translate(-50%);
 }
-.content .triangle .inactive-buttons {
+.content.aboutme .triangle .inactive-buttons {
   border: 1px solid #707070;
 }
-.content .triangle .inactive-buttons:hover {
+.content.aboutme .triangle .inactive-buttons:hover {
   cursor: pointer;
 }
-.content .triangle img {
+.content.aboutme .triangle img {
   display: block;
   width: 220px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 10px;
 }
-.content .triangle img.Automation {
+.content.aboutme .triangle img.Automation {
   transform: rotate(120deg) translate(35px, -65px);
 }
-.content .triangle img.Learning {
+.content.aboutme .triangle img.Learning {
   transform: rotate(-120deg) translate(-35px, -65px);
 }
 
