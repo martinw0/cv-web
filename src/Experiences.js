@@ -24,25 +24,84 @@ function Experiences() {
       <div className='card'>
         <h3>Database skills</h3>
         <div className='graph'>
-          <div className='bar mysql'>
-            <div className='gauge-bg'></div>
-            <div className='gauge'></div>
+          <div className='skill mysql'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
             <p>MySQL</p>
           </div>
-          <div className='bar postgresql'>
-            <div className='gauge-bg'></div>
-            <div className='gauge'></div>
+          <div className='skill postgresql'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
             <p>PostgreSQL</p>
           </div>
-          <div className='bar mongodb'>
-            <div className='gauge-bg'></div>
-            <div className='gauge'></div>
+          <div className='skill mongodb'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
             <p>MongoDB</p>
           </div>
         </div>
       </div>
       <div className='card'>
         <h3>Web skills</h3>
+
+        <div className='graph'>
+          <div className='skill html'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>HTML</p>
+          </div>
+          <div className='skill css'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>CSS</p>
+          </div>
+          <div className='skill js'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>JS</p>
+          </div>
+          <div className='skill sass'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>SASS</p>
+          </div>
+          <div className='break'></div>
+          <div className='skill react'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>React</p>
+          </div>
+          <div className='skill prestashop'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>Prestashop</p>
+          </div>
+          <div className='skill wordpress'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>Wordpress</p>
+          </div>
+        </div>
       </div>
       <div className='card'>
         <h3>System skills</h3>
