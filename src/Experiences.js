@@ -162,7 +162,7 @@ function Experiences() {
               <div className='gauge-bg'></div>
               <div className='gauge'></div>
             </div>
-            <p>GitLab CI/CD</p>
+            <p>Git CI/CD</p>
           </div>
           <div className='skill rpm'>
             <div className='bar'>

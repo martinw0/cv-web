@@ -103,6 +103,7 @@
 .content.experiences .card .graph .skill p {
   position: absolute;
   bottom: 0px;
+  white-space: nowrap;
 }
 .content.experiences .card .graph .bar {
   height: 80px;
