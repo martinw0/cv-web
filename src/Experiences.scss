@@ -104,14 +104,17 @@ $grayish-blue: #E6F0FF;
                 flex-direction: column;
                 align-items: center;
                 margin: 10px 0;
+                position: relative;
                 p {
-                    margin-top: 5px;
+                    position: absolute;
+                    bottom: 0px;
                 }
             }
             .bar {
                 height: 80px;
                 width: 30px;
                 position: relative;
+                margin-bottom: 23px;
                 .gauge-bg {
                     height: 100%;
                     background-color: $marine-blue;
@@ -167,9 +170,41 @@ $grayish-blue: #E6F0FF;
                 height: 15%;
                 background-color: #FB3099;
             }
-            .wordpress .gauge {
-                height: 10%;
-                background-color: #1490D0;
+            .linux .gauge {
+                height: 60%;
+                background-color: #2B2E34;
+            }
+            .vmware .gauge {
+                height: 50%;
+                background-color: #FF7A23;
+            }
+            .vagrant .gauge {
+                height: 40%;
+                background-color: #11389D;
+            }
+            .ansible .gauge {
+                height: 70%;
+                background-color: #E42C1A;
+            }
+            .molecule .gauge {
+                height: 40%;
+                background-color: #59CBB7;
+            }
+            .python .gauge {
+                height: 50%;
+                background-color: #F3E55E;
+            }
+            .inspec .gauge {
+                height: 15%;
+                background-color: #FFB337;
+            }
+            .gitlab .gauge {
+                height: 80%;
+                background-color: #FF4E1B;
+            }
+            .rpm .gauge {
+                height: 15%;
+                background-color: #C5802A;
             }
         }
     }

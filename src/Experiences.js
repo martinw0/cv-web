@@ -105,6 +105,73 @@ function Experiences() {
       </div>
       <div className='card'>
         <h3>System skills</h3>
+        <div className='graph'>
+          <div className='skill linux'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>Linux</p>
+          </div>
+          <div className='skill vmware'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>VMWare</p>
+          </div>
+          <div className='skill vagrant'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>Vagrant</p>
+          </div>
+          <div className='break'></div>
+          <div className='skill ansible'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>Ansible</p>
+          </div>
+          <div className='skill molecule'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>Molecule</p>
+          </div>
+          <div className='skill python'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>Python</p>
+          </div>
+          <div className='break'></div>
+          <div className='skill inspec'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>Inspec</p>
+          </div>
+          <div className='skill gitlab'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>GitLab CI/CD</p>
+          </div>
+          <div className='skill rpm'>
+            <div className='bar'>
+              <div className='gauge-bg'></div>
+              <div className='gauge'></div>
+            </div>
+            <p>RPM</p>
+          </div>
+        </div>
       </div>
     </div>
   )

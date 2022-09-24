@@ -98,14 +98,17 @@
   flex-direction: column;
   align-items: center;
   margin: 10px 0;
+  position: relative;
 }
 .content.experiences .card .graph .skill p {
-  margin-top: 5px;
+  position: absolute;
+  bottom: 0px;
 }
 .content.experiences .card .graph .bar {
   height: 80px;
   width: 30px;
   position: relative;
+  margin-bottom: 23px;
 }
 .content.experiences .card .graph .bar .gauge-bg {
   height: 100%;
@@ -161,9 +164,41 @@
   height: 15%;
   background-color: #FB3099;
 }
-.content.experiences .card .graph .wordpress .gauge {
-  height: 10%;
-  background-color: #1490D0;
+.content.experiences .card .graph .linux .gauge {
+  height: 60%;
+  background-color: #2B2E34;
+}
+.content.experiences .card .graph .vmware .gauge {
+  height: 50%;
+  background-color: #FF7A23;
+}
+.content.experiences .card .graph .vagrant .gauge {
+  height: 40%;
+  background-color: #11389D;
+}
+.content.experiences .card .graph .ansible .gauge {
+  height: 70%;
+  background-color: #E42C1A;
+}
+.content.experiences .card .graph .molecule .gauge {
+  height: 40%;
+  background-color: #59CBB7;
+}
+.content.experiences .card .graph .python .gauge {
+  height: 50%;
+  background-color: #F3E55E;
+}
+.content.experiences .card .graph .inspec .gauge {
+  height: 15%;
+  background-color: #FFB337;
+}
+.content.experiences .card .graph .gitlab .gauge {
+  height: 80%;
+  background-color: #FF4E1B;
+}
+.content.experiences .card .graph .rpm .gauge {
+  height: 15%;
+  background-color: #C5802A;
 }
 
 /*# sourceMappingURL=Experiences.css.map */
