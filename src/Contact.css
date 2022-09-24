@@ -1,0 +1,21 @@
+.content.contact .social-media {
+  width: 200px;
+  margin: auto;
+}
+.content.contact .social-media .link {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.content.contact .social-media .link img {
+  height: 60px;
+  width: 60px;
+  margin-right: 20px;
+}
+.content.contact .social-media .link a {
+  font-size: 1.6rem;
+  color: #24468F;
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=Contact.css.map */

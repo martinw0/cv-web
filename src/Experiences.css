@@ -165,6 +165,10 @@
   height: 15%;
   background-color: #FB3099;
 }
+.content.experiences .card .graph .wordpress .gauge {
+  height: 10%;
+  background-color: #1490D0;
+}
 .content.experiences .card .graph .linux .gauge {
   height: 60%;
   background-color: #2B2E34;
