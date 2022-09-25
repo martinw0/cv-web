@@ -1,4 +1,4 @@
-import {useState,useRef} from 'react';
+import {useState,useRef,useEffect} from 'react';
 import name from './images/name.png';
 import './style.css';
 import AboutMe from './AboutMe';
@@ -29,6 +29,14 @@ function App() {
     setExperiencesSelected(false);
     executeScroll();
   };
+  const documentHeight = () => {
+    const doc = document.documentElement;
+    doc.style.setProperty('--doc-height', `${window.innerHeight}px`);
+  };
+  useEffect(() => {
+    window.addEventListener('resize', documentHeight);
+    documentHeight();
+  }, []);
   return (
     <div className="App">
       <header className="header">

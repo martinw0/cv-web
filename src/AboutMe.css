@@ -82,12 +82,7 @@
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 10px;
-}
-.content.aboutme .triangle img.Automation {
-  transform: rotate(120deg) translate(35px, -65px);
-}
-.content.aboutme .triangle img.Learning {
-  transform: rotate(-120deg) translate(-35px, -65px);
+  transform-origin: center 67%;
 }
 
 /*# sourceMappingURL=AboutMe.css.map */
