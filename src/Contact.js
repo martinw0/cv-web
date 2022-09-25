@@ -12,19 +12,19 @@ function Contact() {
       <div className='social-media'>
         <div className='link linkedin'>
           <img src={linkedin} alt='Linked in icon' />
-          <a href=''>Martin Wallet</a>
+          <a href='https://www.linkedin.com/in/martin-wallet/'>Martin Wallet</a>
         </div>
         <div className='link github'>
           <img src={github} alt='GitHub icon' />
-          <a href=''>martinw0</a>
+          <a href='https://github.com/martinw0'>martinw0</a>
         </div>
         <div className='link twitter'>
           <img src={twitter} alt='Twitter in icon' />
-          <a href=''>@LeWalletM</a>
+          <a href='https://twitter.com/LeWalletM'>@LeWalletM</a>
         </div>
         <div className='link frontendmentor'>
           <img src={frontendmentor} alt='Frontend Mentor icon' />
-          <a href=''>martinw</a>
+          <a href='https://www.frontendmentor.io/profile/martinw0'>martinw</a>
         </div>
       </div>
     </div>

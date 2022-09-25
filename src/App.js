@@ -4,6 +4,7 @@ import './style.css';
 import AboutMe from './AboutMe';
 import Experiences from './Experiences';
 import Contact from './Contact';
+import ReactGA from 'react-ga';
 
 function App() {
   const refContent = useRef(null);
@@ -87,4 +88,6 @@ function App() {
   );
 }
 
+ReactGA.initialize('G-Z7335MYMW9', []);
+ReactGA.pageview(window.location.pathname);
 export default App;
