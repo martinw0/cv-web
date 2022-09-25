@@ -1,22 +1,61 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import './AboutMe.css';
 import triangle from './images/triangle.svg';
+import { gsap } from "gsap";
 
 function AboutMe() {
     const [itemSelected, setItemSelected] = useState('Productivity');
+    const [clockwise, setClockwise] = useState(true);
+    const [rotation, setRotation] = useState(0);
     const handleClick = name => {
+        if(itemSelected==='Productivity' && name==='Automation') {
+            setClockwise(true);
+            setRotation(120);
+        }
+        else if(itemSelected==='Productivity' && name==='Learning') {
+            setClockwise(false);
+            setRotation(-120);
+        }
+        else if(itemSelected==='Automation' && name==='Learning') {
+            setClockwise(false);
+            setRotation(240);
+        }
+        else if(itemSelected==='Automation' && name==='Productivity') {
+            setClockwise(true);
+            setRotation(0);
+        }
+        else if(itemSelected==='Learning' && name==='Productivity') {
+            setClockwise(true);
+            setRotation(0);
+        }
+        else if(itemSelected==='Learning' && name==='Automation') {
+            setClockwise(false);
+            setRotation(-240);
+        } 
         setItemSelected(name);
     };
+    const triangleRef = useRef(null);
+    useEffect(() => {
+        //clockwise ? setRotation(rotation+120) : setRotation(rotation-120);
+        gsap.to(triangleRef.current, {
+            rotate: rotation,
+            duration: 2
+        })
+    }, [itemSelected]);
     return(
         <div className='content aboutme'>
             <h2>About me</h2>
             <p>Three things that makes me</p>
             <div class="triangle">
                 <button value='Productivity' onClick={e => handleClick(e.target.value)} className={itemSelected==='Productivity' ? null : 'inactive-buttons'}>Productivity</button>
-                <img className={itemSelected} src={triangle} alt="Triangle" />
+                {/* <button value='Productivity' onClick={e => handleClick(e.target.value)} className={itemSelected==='Productivity' ? null : 'inactive-buttons'}>Productivity</button> */}
+                <img src={triangle} ref={triangleRef} alt="Triangle" />
+                {/* <img className={itemSelected} src={triangle} useRef={triangleRef} alt="Triangle" /> */}
                 <button value='Learning' onClick={e => handleClick(e.target.value)} className={itemSelected==='Learning' ? null : 'inactive-buttons'}>Learning</button>
+                {/* <button value='Learning' onClick={e => handleClick(e.target.value)} className={itemSelected==='Learning' ? null : 'inactive-buttons'}>Learning</button> */}
                 <button value='Automation' onClick={e => handleClick(e.target.value)} className={itemSelected==='Automation' ? null : 'inactive-buttons'}>Automation</button>
+                {/* <button value='Automation' onClick={e => handleClick(e.target.value)} className={itemSelected==='Automation' ? null : 'inactive-buttons'}>Automation</button> */}
             </div>
             <div class="card">
                 <Paragraph item={itemSelected} />
