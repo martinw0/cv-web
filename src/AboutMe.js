@@ -6,43 +6,37 @@ import { gsap } from "gsap";
 
 function AboutMe() {
     const [itemSelected, setItemSelected] = useState('Productivity');
-    const [clockwise, setClockwise] = useState(true);
     const [rotation, setRotation] = useState(0);
     const handleClick = name => {
+        let clockwise = true;
         if(itemSelected==='Productivity' && name==='Automation') {
-            setClockwise(true);
-            setRotation(120);
+            clockwise = true;
         }
         else if(itemSelected==='Productivity' && name==='Learning') {
-            setClockwise(false);
-            setRotation(-120);
+            clockwise = false;
         }
         else if(itemSelected==='Automation' && name==='Learning') {
-            setClockwise(false);
-            setRotation(240);
+            clockwise = true;
         }
         else if(itemSelected==='Automation' && name==='Productivity') {
-            setClockwise(true);
-            setRotation(0);
+            clockwise = false;
         }
         else if(itemSelected==='Learning' && name==='Productivity') {
-            setClockwise(true);
-            setRotation(0);
+            clockwise = true;
         }
         else if(itemSelected==='Learning' && name==='Automation') {
-            setClockwise(false);
-            setRotation(-240);
+            clockwise = false;
         } 
+        clockwise ? setRotation(rotation+120) : setRotation(rotation-120);
         setItemSelected(name);
     };
     const triangleRef = useRef(null);
     useEffect(() => {
-        //clockwise ? setRotation(rotation+120) : setRotation(rotation-120);
         gsap.to(triangleRef.current, {
             rotate: rotation,
             duration: 2
         })
-    }, [itemSelected]);
+    }, [rotation]);
     return(
         <div className='content aboutme'>
             <h2>About me</h2>

@@ -50,28 +50,28 @@ function App() {
         <img src={name} alt="Martin Wallet" />
         <h1>Database administrator</h1>
         <p>But not only</p>
-        <div class="profile">
-          <div class="profile-picture"></div>
+        <div className="profile">
+          <div className="profile-picture"></div>
           <ul>
             <li>
-              <p class="years-number">25</p>
+              <p className="years-number">25</p>
               <div>
-                <p class="years-category">my age</p>
-                <p class="years-text">years</p>
+                <p className="years-category">my age</p>
+                <p className="years-text">years</p>
               </div>
             </li>
             <li>
-              <p class="years-number">5</p>
+              <p className="years-number">5</p>
               <div>
-                <p class="years-category">studies</p>
-                <p class="years-text">years</p>
+                <p className="years-category">studies</p>
+                <p className="years-text">years</p>
               </div>
             </li>
             <li>
-              <p class="years-number">3</p>
+              <p className="years-number">3</p>
               <div>
-                <p class="years-category">work</p>
-                <p class="years-text">years</p>
+                <p className="years-category">work</p>
+                <p className="years-text">years</p>
               </div>
             </li>
           </ul>
