@@ -88,6 +88,6 @@ function App() {
   );
 }
 
-ReactGA.initialize('UA-99996165-2', []);
+ReactGA.initialize('G-Z7335MYMW9', []);
 ReactGA.pageview(window.location.pathname);
 export default App;
