@@ -2,6 +2,9 @@ $marine-blue: #24468F;
 .content.contact {
     .social-media {
         width: 200px;
+        a {
+            text-decoration: none;
+        }
         margin: auto;
         .link {
             display: flex;
@@ -12,7 +15,7 @@ $marine-blue: #24468F;
                 width: 60px;
                 margin-right: 20px;
             }
-            a {
+            p {
                 font-size: 1.6rem;
                 color: $marine-blue;
                 text-decoration: none;

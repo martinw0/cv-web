@@ -9,6 +9,7 @@ $grayish-blue: #E6F0FF;
     .img-container {
         width: 300px;
         margin: 30px auto;
+        transition: max-height 2s;
         &.step1 {
             max-height: 130px;
             overflow: hidden;
@@ -18,7 +19,8 @@ $grayish-blue: #E6F0FF;
             overflow: hidden;
         }
         &.step3 {
-            max-height: none;
+            max-height: 400px;
+            overflow: hidden;
         }
     }
     p {

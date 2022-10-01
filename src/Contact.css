@@ -2,6 +2,9 @@
   width: 200px;
   margin: auto;
 }
+.content.contact .social-media a {
+  text-decoration: none;
+}
 .content.contact .social-media .link {
   display: flex;
   align-items: center;
@@ -12,7 +15,7 @@
   width: 60px;
   margin-right: 20px;
 }
-.content.contact .social-media .link a {
+.content.contact .social-media .link p {
   font-size: 1.6rem;
   color: #24468F;
   text-decoration: none;
