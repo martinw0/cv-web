@@ -27,15 +27,16 @@ function AboutMe() {
         else if(itemSelected==='Learning' && name==='Automation') {
             clockwise = false;
         } 
-        clockwise ? setRotation(rotation+120) : setRotation(rotation-120);
+        if (itemSelected !== name) {
+            clockwise ? setRotation(rotation+120) : setRotation(rotation-120);
+        }
         setItemSelected(name);
     };
     const triangleRef = useRef(null);
     useEffect(() => {
         gsap.to(triangleRef.current, {
             rotate: rotation,
-            duration: 2
-        })
+        });
     }, [rotation]);
     return(
         <div className='content aboutme'>
@@ -43,13 +44,9 @@ function AboutMe() {
             <p>Three things that makes me</p>
             <div class="triangle">
                 <button value='Productivity' onClick={e => handleClick(e.target.value)} className={itemSelected==='Productivity' ? null : 'inactive-buttons'}>Productivity</button>
-                {/* <button value='Productivity' onClick={e => handleClick(e.target.value)} className={itemSelected==='Productivity' ? null : 'inactive-buttons'}>Productivity</button> */}
                 <img src={triangle} ref={triangleRef} alt="Triangle" />
-                {/* <img className={itemSelected} src={triangle} useRef={triangleRef} alt="Triangle" /> */}
                 <button value='Learning' onClick={e => handleClick(e.target.value)} className={itemSelected==='Learning' ? null : 'inactive-buttons'}>Learning</button>
-                {/* <button value='Learning' onClick={e => handleClick(e.target.value)} className={itemSelected==='Learning' ? null : 'inactive-buttons'}>Learning</button> */}
                 <button value='Automation' onClick={e => handleClick(e.target.value)} className={itemSelected==='Automation' ? null : 'inactive-buttons'}>Automation</button>
-                {/* <button value='Automation' onClick={e => handleClick(e.target.value)} className={itemSelected==='Automation' ? null : 'inactive-buttons'}>Automation</button> */}
             </div>
             <div class="card">
                 <Paragraph item={itemSelected} />

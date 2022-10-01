@@ -8,7 +8,7 @@ import ReactGA from 'react-ga';
 
 function App() {
   const refContent = useRef(null);
-  const executeScroll = () => refContent.current.scrollIntoView();
+  const executeScroll = () => refContent.current.scrollIntoView({behavior: "smooth",});
   const [aboutMeSelected, setAboutMeSelected] = useState(true);
   const handleClickAboutMe = event => {
     setAboutMeSelected(true);
