@@ -5,6 +5,7 @@
 $pale-blue: #4191B5;
 $light-green: #04D596;
 $dark-blue: #161430;
+$dark-grayish-blue: #51616d;
 $marine-blue: #24468F;
 $very-lght-blue: #F4FBFE;
 $light-grey: #707070;
@@ -124,6 +125,19 @@ html {
                     margin-top: 2px
                 }
             }
+        }
+    }
+    .dropdown {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        .control {
+            border: none;
+            background-color: transparent;
+            color: $dark-grayish-blue
+        }
+        .arrow {
+            border-color: $dark-grayish-blue transparent transparent;
         }
     }
 }

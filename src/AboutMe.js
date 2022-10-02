@@ -42,16 +42,16 @@ function AboutMe() {
         <div className='content aboutme'>
             <h2>About me</h2>
             <p>Three things that makes me</p>
-            <div class="triangle">
+            <div className="triangle">
                 <button value='Productivity' onClick={e => handleClick(e.target.value)} className={itemSelected==='Productivity' ? null : 'inactive-buttons'}>Productivity</button>
                 <img src={triangle} ref={triangleRef} alt="Triangle" />
                 <button value='Learning' onClick={e => handleClick(e.target.value)} className={itemSelected==='Learning' ? null : 'inactive-buttons'}>Learning</button>
                 <button value='Automation' onClick={e => handleClick(e.target.value)} className={itemSelected==='Automation' ? null : 'inactive-buttons'}>Automation</button>
             </div>
-            <div class="card">
+            <div className="card">
                 <Paragraph item={itemSelected} />
-                <div class="selector">
-                    <div class="line"></div>
+                <div className="selector">
+                    <div className="line"></div>
                     <div className={'circle ' + (itemSelected==='Productivity' ? 'active' : null)}></div>
                     <div className={'circle ' + (itemSelected==='Learning' ? 'active' : null)}></div>
                     <div className={'circle ' + (itemSelected==='Automation' ? 'active' : null)}></div>

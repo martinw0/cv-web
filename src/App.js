@@ -5,8 +5,19 @@ import AboutMe from './AboutMe';
 import Experiences from './Experiences';
 import Contact from './Contact';
 import ReactGA from 'react-ga';
+import i18next from "i18next";
+import "./i18nextConf";
+import { useTranslation } from 'react-i18next';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 function App() {
+  const { t } = useTranslation();
+  const options = [
+    { value: 'en', label: "English" },
+    { value: 'fr', label: "Français" }
+  ];
+  const defaultOption = "en";
   const refContent = useRef(null);
   const executeScroll = () => refContent.current.scrollIntoView({behavior: "smooth",});
   const [aboutMeSelected, setAboutMeSelected] = useState(true);
@@ -38,41 +49,45 @@ function App() {
     window.addEventListener('resize', documentHeight);
     documentHeight();
   }, []);
+  const _onSelect = options => {
+    i18next.changeLanguage(options['value']);
+  };
   return (
     <div className="App">
       <header className="header">
+        <Dropdown options={options} onChange={_onSelect} value={defaultOption} placeholder="Select an option" className='dropdown' controlClassName='control' arrowClassName='arrow' />;
         <nav>
           <ul>
-            <li onClick={handleClickAboutMe}>About me</li>
-            <li onClick={handleClickExperiences}>Experiences</li>
-            <li onClick={handleClickContact}>Contact</li>
+            <li onClick={handleClickAboutMe}>{t("about_me")}</li>
+            <li onClick={handleClickExperiences}>{t("experiences")}</li>
+            <li onClick={handleClickContact}>{t("contact")}</li>
           </ul>
         </nav>
         <img src={name} alt="Martin Wallet" />
-        <h1>Database administrator</h1>
-        <p>But not only</p>
+        <h1>{t("database_administrator")}</h1>
+        <p>{t("but_not_only")}</p>
         <div className="profile">
           <div className="profile-picture"></div>
           <ul>
             <li>
               <p className="years-number">25</p>
               <div>
-                <p className="years-category">my age</p>
-                <p className="years-text">years</p>
+                <p className="years-category">{t("my_age")}</p>
+                <p className="years-text">{t("years")}</p>
               </div>
             </li>
             <li>
               <p className="years-number">5</p>
               <div>
-                <p className="years-category">studies</p>
-                <p className="years-text">years</p>
+                <p className="years-category">{t("studies")}</p>
+                <p className="years-text">{t("years")}</p>
               </div>
             </li>
             <li>
               <p className="years-number">3</p>
               <div>
-                <p className="years-category">work</p>
-                <p className="years-text">years</p>
+                <p className="years-category">{t("work")}</p>
+                <p className="years-text">{t("years")}</p>
               </div>
             </li>
           </ul>
