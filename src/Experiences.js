@@ -1,12 +1,15 @@
 import React, {useState} from 'react';
 import pathMobile from './images/path_mobile.svg';
 import './Experiences.css';
+import { useTranslation } from 'react-i18next';
+import { t } from 'i18next';
 
 function Experiences() {
   const [stepSelected, setStepSelected] = useState(1);
+  const { t } = useTranslation();
   return(
     <div className='content experiences'>
-      <h2>Experiences</h2>
+      <h2>{t("experiences")}</h2>
       <div className={'img-container step' + stepSelected}>
         <img src={pathMobile} alt="Footprint path" />
       </div>
@@ -17,12 +20,12 @@ function Experiences() {
           <div className={'circle ' + (stepSelected===3 ? 'active' : null)}></div>
       </div>
       <div className='buttons'>
-        <button onClick={() => stepSelected===1 ? null : setStepSelected(stepSelected-1)}>Previous</button>
-        <button onClick={() => stepSelected===3 ? null : setStepSelected(stepSelected+1)}>Next</button>
+        <button onClick={() => stepSelected===1 ? null : setStepSelected(stepSelected-1)}>{t("previous")}</button>
+        <button onClick={() => stepSelected===3 ? null : setStepSelected(stepSelected+1)}>{t("next")}</button>
       </div>
       <Paragraph step={stepSelected} />
       <div className='card'>
-        <h3>Database skills</h3>
+        <h3>{t("database_skills")}</h3>
         <div className='graph'>
           <div className='skill mysql'>
             <div className='bar'>
@@ -48,7 +51,7 @@ function Experiences() {
         </div>
       </div>
       <div className='card'>
-        <h3>Web skills</h3>
+        <h3>{t("web_skills")}</h3>
 
         <div className='graph'>
           <div className='skill html'>
@@ -104,7 +107,7 @@ function Experiences() {
         </div>
       </div>
       <div className='card'>
-        <h3>System skills</h3>
+        <h3>{t("system_skills")}</h3>
         <div className='graph'>
           <div className='skill linux'>
             <div className='bar'>
@@ -182,31 +185,31 @@ function Paragraph(props) {
   if(props.step===1) {
       return(
         <p>
-          After high school degree, I went to Arras (France) to an engineer school: cesi. I studied IT for three years, after I chose to specified myself in the field of “system and network”. Finally, after two years, I was gradated and got the master’s degree.<br />
+          {t("paragraph_exp_1_one")}<br />
           <br />
-          During my last year at school, I did an internship of 6 months at Worldline in a DBA (Data Base Administrator) team.  The internship goal was to create a new database offer: a PaaS for MySQL. To reach the target, I created an automated process that build a VM and install a MySQL server on it.  Finally, the result was: a win of time and reactivity.<br />
+          {t("paragraph_exp_1_two")}<br />
         </p>
       )
   }
   else if(props.step===2) {
       return(
           <p>
-            Next to my internship, I was hired as a DBA in the same team (august 2019). At this step, I was responsible of the databases of 3 customers projects. Thanks to this, I improved a lot my MySQL skills. It gives me also a clear visibility on production services. The first part of my time was dedicated to these projects and the other part was assigned to automation projects with Ansible. The goal was to standardise and industrialise our DBMS installations.<br />
-            Next, when I was comfortable with that, I was asked to learn Postgres. So, I got some Postgres databases to manage.  In the same time, after the working day, during my personal time I studied MongoDB administration.<br />
+            {t("paragraph_exp_2_one")}<br />
+            {t("paragraph_exp_2_two")}<br />
             <br />
-            After winning some skills, I got the responsibility to tutor an intern. It happened well and I liked that. So, I became the tutor of others interns and this year (2022) I manage 3 interns. I like to learn to the others and seeing them progressing and it learns me how to manage people and projects.<br />
+            {t("paragraph_exp_2_three")}<br />
           </p>
       )
   }
   else if(props.step===3) {
       return(
           <p>
-            Now (August 2022), I’m wondering what I will do next.<br />
+            {t("paragraph_exp_3_one")}<br />
             <br />
-            Between 6 and 12 months ago, I began to learn web development and web design. In facts, for few years I want to create my own society.<br />
-            I also have good knowledges in the system field, especially DevOps and I’m very interested in the cloud.<br />
+            {t("paragraph_exp_3_two")}<br />
+            {t("paragraph_exp_3_three")}<br />
             <br />
-            Don’t hesitate to contact me if you want to work with me!!<br />
+            {t("paragraph_exp_3_four")}<br />
           </p>
       )
   }

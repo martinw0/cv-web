@@ -3,8 +3,11 @@ import { useState, useRef, useEffect } from 'react';
 import './AboutMe.css';
 import triangle from './images/triangle.svg';
 import { gsap } from "gsap";
+import { useTranslation } from 'react-i18next';
+import { t } from 'i18next';
 
 function AboutMe() {
+    const { t } = useTranslation();
     const [itemSelected, setItemSelected] = useState('Productivity');
     const [rotation, setRotation] = useState(0);
     const handleClick = name => {
@@ -40,13 +43,13 @@ function AboutMe() {
     }, [rotation]);
     return(
         <div className='content aboutme'>
-            <h2>About me</h2>
-            <p>Three things that makes me</p>
+            <h2>{t("about_me")}</h2>
+            <p>{t("about_me_desc")}</p>
             <div className="triangle">
-                <button value='Productivity' onClick={e => handleClick(e.target.value)} className={itemSelected==='Productivity' ? null : 'inactive-buttons'}>Productivity</button>
+                <button value='Productivity' onClick={e => handleClick(e.target.value)} className={itemSelected==='Productivity' ? null : 'inactive-buttons'}>{t("productivity")}</button>
                 <img src={triangle} ref={triangleRef} alt="Triangle" />
-                <button value='Learning' onClick={e => handleClick(e.target.value)} className={itemSelected==='Learning' ? null : 'inactive-buttons'}>Learning</button>
-                <button value='Automation' onClick={e => handleClick(e.target.value)} className={itemSelected==='Automation' ? null : 'inactive-buttons'}>Automation</button>
+                <button value='Learning' onClick={e => handleClick(e.target.value)} className={itemSelected==='Learning' ? null : 'inactive-buttons'}>{t("learning")}</button>
+                <button value='Automation' onClick={e => handleClick(e.target.value)} className={itemSelected==='Automation' ? null : 'inactive-buttons'}>{t("automation")}</button>
             </div>
             <div className="card">
                 <Paragraph item={itemSelected} />
@@ -64,34 +67,32 @@ function AboutMe() {
 function Paragraph(props) {
     if(props.item==='Productivity') {
         return(
-            <p>I am very attracted to the productivity: In my opinion, it is the way of performing actions as efficiently as possible and organizing them in such a way that we achieve our goals.<br />
-            Recently, I’m interested in the organization and the personal development. These subjects are both valuable at work and for the personal life.
-            I like to believe that mindset makes my work better and more valuable.<br />
+            <p>{t("paragraph_productivity_one")}<br />
+            {t("paragraph_productivity_two")}<br />
             <br />
-            I like to listen the podcasts and read the website of Matthieu Desroches. He has a great experience and give very clear explanations and concrete examples. 
+            {t("paragraph_productivity_three")}
             </p>
         )
     }
     else if(props.item==='Learning') {
         return(
             <p>
-                I’m always trying to improve myself by learning new things or strenghten my skills.
-                I’ve done my studies with PBL (Problem Base Learning) method at cesi. So during my studies I learnt how to learn by myself.<br />
+                {t("paragraph_learning_one")}<br />
                 <br/>
-                I think learning bye practicing is the best way to learn. For example, actually, I’m learning the web development and the web design by making websites. The frontendmentor challenges are very useful for that.<br />
+                {t("paragraph_learning_two")}<br />
                 <br />
-                I’m also curious and I do often some little projects on a raspberry Pi. In IT, it’s a very important quality as the technologies evolving so fast. <br />
+                {t("paragraph_learning_three")}<br />
             </p>
         )
     }
     else if(props.item==='Automation') {
         return(
             <p>
-                I am fascinated by this process of delegating Human tasks to computer/robot. In everyday life, and especially at work, I’ve always this question in my mind when I do the same task one time, two times, three times: Can it be automated ?<br />
+                {t("paragraph_automation_one")}<br />
                 <br />
-                I believe in the theory that is saying : “ the best engineer is a lazy engineer ”. Of course, the idea come from this state of mind. But, to realise it, the work should be done and this lazy part disappear for a moment. Finally, the result of this work is remarkable when we won’t do again a recurrent task. That’s why I love IT!<br />
+                {t("paragraph_automation_two")}<br />
                 <br />
-                Actually, the cloud is showing us that the automation is the key.<br />
+                {t("paragraph_automation_three")}<br />
             </p>
         )
     }
