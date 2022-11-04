@@ -140,6 +140,59 @@ html {
             border-color: $dark-grayish-blue transparent transparent;
         }
     }
+    @include media-min("desktop-up") {
+        background: center/cover url('./images/binary_background.svg'), $dark-blue;
+        nav {
+            text-align: right;
+            ul {
+                width: 500px;
+                li {
+                    font-size: 2rem;
+                }
+            }
+        }
+        img {
+            width: 450px;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-top: 11vh;
+        }
+        p {
+            font-size: 1.5rem;
+        }
+        .profile {
+            justify-content: flex-end;
+            .profile-picture {
+                background: url('./images/head.png') left bottom/contain no-repeat;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 33vw;
+                height: 78vh;
+                //min-height: 620px;
+            }
+            ul {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                height: 300px;
+                width: 20%;
+                li {
+                    .years-number {
+                        font-size: 6rem;
+                        width: 80px;
+                    }
+                    .years-category {
+                        font-size: 1.5rem;
+                    }
+                    .years-text {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
 }
 .content {
     background-color: $very-lght-blue;

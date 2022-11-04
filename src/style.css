@@ -123,6 +123,58 @@ html {
 .header .dropdown .arrow {
   border-color: #51616d transparent transparent;
 }
+@media screen and (min-width: 1024px) {
+  .header {
+    background: center/cover url("./images/binary_background.svg"), #161430;
+  }
+  .header nav {
+    text-align: right;
+  }
+  .header nav ul {
+    width: 500px;
+  }
+  .header nav ul li {
+    font-size: 2rem;
+  }
+  .header img {
+    width: 450px;
+  }
+  .header h1 {
+    font-size: 2rem;
+    margin-top: 11vh;
+  }
+  .header p {
+    font-size: 1.5rem;
+  }
+  .header .profile {
+    justify-content: flex-end;
+  }
+  .header .profile .profile-picture {
+    background: url("./images/head.png") left bottom/contain no-repeat;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 33vw;
+    height: 78vh;
+  }
+  .header .profile ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 300px;
+    width: 20%;
+  }
+  .header .profile ul li .years-number {
+    font-size: 6rem;
+    width: 80px;
+  }
+  .header .profile ul li .years-category {
+    font-size: 1.5rem;
+  }
+  .header .profile ul li .years-text {
+    font-size: 1.5rem;
+  }
+}
 
 .content {
   background-color: #F4FBFE;
