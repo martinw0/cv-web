@@ -84,5 +84,10 @@
   padding-bottom: 10px;
   transform-origin: center 67%;
 }
+@media screen and (min-width: 1024px) {
+  .content.aboutme .head h2 {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=AboutMe.css.map */

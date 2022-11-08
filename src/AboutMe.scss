@@ -5,6 +5,19 @@ $marine-blue: #24468F;
 $very-lght-blue: #F4FBFE;
 $light-grey: #707070;
 $grayish-blue: #E6F0FF;
+$breakpoints: (
+    "phone-down": 500px,
+    "tablet-up": 768px,
+    "tablet-down": 900px,
+    "desktop-up": 1024px,
+    "desktop-down": 1280px,
+    "widescreen-up": 1440px
+);
+@mixin media-min($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) {
+        &{ @content; }
+    }
+}
 .content.aboutme {
     .card {
         p {
@@ -92,6 +105,13 @@ $grayish-blue: #E6F0FF;
             padding-top: 40px;
             padding-bottom: 10px;
             transform-origin: center 67%;
+        }
+    }
+    .head {
+        @include media-min("desktop-up") {
+            h2 {
+                display: none;
+            }
         }
     }
 }

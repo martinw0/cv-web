@@ -93,10 +93,25 @@ function App() {
           </ul>
         </div>
       </header>
-      <div ref={refContent}>
-        {aboutMeSelected && <AboutMe />}
-        {experiencesSelected && <Experiences />}
-        {contactSelected && <Contact />}
+      <div ref={refContent}  className="container">
+        <div className='menu'>
+        <div className="selector">
+            <div className="line"></div>
+            <div className={'circle ' + (aboutMeSelected ? 'active' : null)}></div>
+            <div className={'circle ' + (experiencesSelected ? 'active' : null)}></div>
+            <div className={'circle ' + (contactSelected ? 'active' : null)}></div>
+        </div>
+        <ul>
+            <li className={aboutMeSelected ? 'active' : null} onClick={handleClickAboutMe}>{t("about_me")}</li>
+            <li className={experiencesSelected ? 'active' : null} onClick={handleClickExperiences}>{t("experiences")}</li>
+            <li className={contactSelected ? 'active' : null} onClick={handleClickContact}>{t("contact")}</li>
+        </ul>
+        </div>
+        <div className='content-container'>
+          {aboutMeSelected && <AboutMe />}
+          {experiencesSelected && <Experiences />}
+          {contactSelected && <Contact />}
+        </div>
       </div>
     </div>
 

@@ -43,8 +43,10 @@ function AboutMe() {
     }, [rotation]);
     return(
         <div className='content aboutme'>
-            <h2>{t("about_me")}</h2>
-            <p>{t("about_me_desc")}</p>
+            <div className='head'>
+                <h2>{t("about_me")}</h2>
+                <p>{t("about_me_desc")}</p>
+            </div>
             <div className="triangle">
                 <button value='Productivity' onClick={e => handleClick(e.target.value)} className={itemSelected==='Productivity' ? null : 'inactive-buttons'}>{t("productivity")}</button>
                 <img src={triangle} ref={triangleRef} alt="Triangle" />
