@@ -85,8 +85,37 @@
   transform-origin: center 67%;
 }
 @media screen and (min-width: 1024px) {
+  .content.aboutme .top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .content.aboutme .top .empty {
+    width: 200px;
+    height: 10px;
+    order: 3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content.aboutme .head {
+    order: 1;
+  }
   .content.aboutme .head h2 {
     display: none;
+  }
+  .content.aboutme .head p {
+    text-transform: uppercase;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content.aboutme .triangle {
+    width: 500px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content.aboutme .card {
+    width: 80%;
+    margin: 0 auto;
   }
 }
 

@@ -107,11 +107,38 @@ $breakpoints: (
             transform-origin: center 67%;
         }
     }
+    .top {
+        @include media-min("desktop-up") {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            .empty {
+                width: 200px;
+                height: 10px;
+                order: 3;
+            }
+        }
+    }
     .head {
         @include media-min("desktop-up") {
+            order: 1;
             h2 {
                 display: none;
             }
+            p {
+                text-transform: uppercase;
+            }
+        }
+    }
+    .triangle {
+        @include media-min("desktop-up") {
+            width: 500px;
+        }
+    }
+    .card {
+        @include media-min("desktop-up") {
+            width: 80%;
+            margin: 0 auto;
         }
     }
 }

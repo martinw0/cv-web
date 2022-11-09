@@ -199,7 +199,7 @@ html {
     display: flex;
     flex-direction: row;
     @include media-min("desktop-up") {
-        padding: 20px;
+        padding: 20px 70px;
     }
 }
 .content-container {
