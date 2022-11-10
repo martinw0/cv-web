@@ -112,21 +112,21 @@ $breakpoints: (
             display: flex;
             justify-content: space-around;
             align-items: center;
-            .empty {
-                width: 200px;
-                height: 10px;
-                order: 3;
-            }
+            width: 80%;
+            margin: 0 auto;
         }
     }
     .head {
         @include media-min("desktop-up") {
+            padding-right: 15vw;
             order: 1;
             h2 {
                 display: none;
             }
             p {
                 text-transform: uppercase;
+                font-size: 3rem;
+                font-weight: 500;
             }
         }
     }

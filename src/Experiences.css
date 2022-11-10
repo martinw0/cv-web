@@ -15,6 +15,36 @@
   max-height: 400px;
   overflow: hidden;
 }
+.content.experiences .img-container img.desktop {
+  display: none;
+}
+@media screen and (min-width: 1024px) {
+  .content.experiences .img-container {
+    width: 45vw;
+    height: 200px;
+    margin: 50px auto;
+    transition: max-width 2s;
+  }
+  .content.experiences .img-container img.mobile {
+    display: none;
+  }
+  .content.experiences .img-container img.desktop {
+    display: block;
+  }
+  .content.experiences .img-container.step1 {
+    max-height: none;
+    max-width: 33%;
+    overflow: hidden;
+  }
+  .content.experiences .img-container.step2 {
+    max-width: 66%;
+    overflow: hidden;
+  }
+  .content.experiences .img-container.step3 {
+    max-width: 100%;
+    overflow: hidden;
+  }
+}
 .content.experiences p {
   text-align: left;
   color: #4191B5;

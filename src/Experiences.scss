@@ -5,6 +5,19 @@ $marine-blue: #24468F;
 $very-lght-blue: #F4FBFE;
 $light-grey: #707070;
 $grayish-blue: #E6F0FF;
+$breakpoints: (
+    "phone-down": 500px,
+    "tablet-up": 768px,
+    "tablet-down": 900px,
+    "desktop-up": 1024px,
+    "desktop-down": 1280px,
+    "widescreen-up": 1440px
+);
+@mixin media-min($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) {
+        &{ @content; }
+    }
+}
 .content.experiences {
     .img-container {
         width: 300px;
@@ -21,6 +34,34 @@ $grayish-blue: #E6F0FF;
         &.step3 {
             max-height: 400px;
             overflow: hidden;
+        }
+        img.desktop {
+            display: none;
+        }
+        @include media-min("desktop-up") {
+            img.mobile {
+                display: none;
+            }
+            img.desktop {
+                display: block;
+            }
+            width: 45vw;
+            height: 200px;
+            margin: 50px auto;
+            transition: max-width 2s;
+            &.step1 {
+                max-height: none;
+                max-width: 33%;
+                overflow: hidden;
+            }
+            &.step2 {
+                max-width: 66%;
+                overflow: hidden;
+            }
+            &.step3 {
+                max-width: 100%;
+                overflow: hidden;
+            }
         }
     }
     p {

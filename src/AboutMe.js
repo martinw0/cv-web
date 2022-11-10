@@ -55,7 +55,7 @@ function AboutMe() {
                     <button value='Learning' onClick={e => handleClick(e.target.value)} className={itemSelected==='Learning' ? null : 'inactive-buttons'}>{t("learning")}</button>
                     <button value='Automation' onClick={e => handleClick(e.target.value)} className={itemSelected==='Automation' ? null : 'inactive-buttons'}>{t("automation")}</button>
                 </div>
-                <div className='empty'></div>
+                {/* <div className='empty'></div> */}
             </div>
             <div className="card">
                 <Paragraph item={itemSelected} />

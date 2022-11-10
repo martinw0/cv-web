@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import pathMobile from './images/path_mobile.svg';
+import path from './images/path.svg';
 import './Experiences.css';
 import { useTranslation } from 'react-i18next';
 import { t } from 'i18next';
@@ -11,7 +12,8 @@ function Experiences() {
     <div className='content experiences'>
       <h2>{t("experiences")}</h2>
       <div className={'img-container step' + stepSelected}>
-        <img src={pathMobile} alt="Footprint path" />
+        <img className='mobile' src={pathMobile} alt="Footprint path" />
+        <img className='desktop' src={path} alt="Footprint path" />
       </div>
       <div class="selector">
           <div class="line"></div>
