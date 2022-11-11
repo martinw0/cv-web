@@ -21,7 +21,7 @@
 @media screen and (min-width: 1024px) {
   .content.experiences .img-container {
     max-width: 45vw;
-    height: 200px;
+    height: auto;
     margin: 50px auto;
     transition: width 2s;
   }
@@ -113,6 +113,11 @@
 }
 @media screen and (min-width: 1024px) {
   .content.experiences .buttons {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .content.experiences .buttons {
     width: 40%;
   }
 }
@@ -126,6 +131,17 @@
   margin: 20px auto;
 }
 @media screen and (min-width: 1024px) {
+  .content.experiences .card {
+    flex-basis: 70%;
+  }
+  .content.experiences .card:first-of-type {
+    flex-basis: 40%;
+  }
+  .content.experiences .card:last-of-type {
+    flex-basis: 95%;
+  }
+}
+@media screen and (min-width: 1280px) {
   .content.experiences .card {
     flex-basis: 60%;
   }

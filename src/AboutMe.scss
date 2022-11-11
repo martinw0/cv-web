@@ -118,7 +118,7 @@ $breakpoints: (
     }
     .head {
         @include media-min("desktop-up") {
-            padding-right: 15vw;
+            padding-right: 5vw;
             order: 1;
             h2 {
                 display: none;
@@ -128,6 +128,9 @@ $breakpoints: (
                 font-size: 3rem;
                 font-weight: 500;
             }
+        }
+        @include media-min("desktop-down") {
+            padding-right: 15vw;
         }
     }
     .triangle {

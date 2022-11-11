@@ -95,7 +95,7 @@
 }
 @media screen and (min-width: 1024px) {
   .content.aboutme .head {
-    padding-right: 15vw;
+    padding-right: 5vw;
     order: 1;
   }
   .content.aboutme .head h2 {
@@ -105,6 +105,11 @@
     text-transform: uppercase;
     font-size: 3rem;
     font-weight: 500;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .content.aboutme .head {
+    padding-right: 15vw;
   }
 }
 @media screen and (min-width: 1024px) {

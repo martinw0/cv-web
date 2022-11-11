@@ -48,7 +48,7 @@ $breakpoints: (
                 width: 45vw;
             }
             max-width: 45vw;
-            height: 200px;
+            height: auto;
             margin: 50px auto;
             transition: width 2s;
             &.step1 {
@@ -131,6 +131,9 @@ $breakpoints: (
             background-color: $dark-blue;
         }
         @include media-min("desktop-up") {
+            width: 60%;
+        }
+        @include media-min("desktop-down") {
             width: 40%;
         }
     }
@@ -143,6 +146,15 @@ $breakpoints: (
     .card {
         margin: 20px auto;
         @include media-min("desktop-up") {
+            flex-basis: 70%;
+            &:first-of-type {
+                flex-basis: 40%;
+            }
+            &:last-of-type {
+                flex-basis: 95%;
+            }
+        }
+        @include media-min("desktop-down") {
             flex-basis: 60%;
             &:first-of-type {
                 flex-basis: 30%;

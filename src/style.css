@@ -159,7 +159,7 @@ html {
   }
   .header .profile ul {
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translateY(-50%);
     height: 300px;
     width: 20%;
