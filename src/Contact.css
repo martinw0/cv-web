@@ -20,5 +20,19 @@
   color: #24468F;
   text-decoration: none;
 }
+@media screen and (min-width: 1024px) {
+  .content.contact h2 {
+    display: none;
+  }
+  .content.contact .social-media {
+    display: flex;
+    width: 500px;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+  }
+  .content.contact .social-media a {
+    flex-basis: 45%;
+  }
+}
 
 /*# sourceMappingURL=Contact.css.map */

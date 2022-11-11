@@ -1,4 +1,17 @@
 $marine-blue: #24468F;
+$breakpoints: (
+    "phone-down": 500px,
+    "tablet-up": 768px,
+    "tablet-down": 900px,
+    "desktop-up": 1024px,
+    "desktop-down": 1280px,
+    "widescreen-up": 1440px
+);
+@mixin media-min($_key) {
+    @media screen and (min-width: map-get($breakpoints, $_key)) {
+        &{ @content; }
+    }
+}
 .content.contact {
     .social-media {
         width: 200px;
@@ -19,6 +32,20 @@ $marine-blue: #24468F;
                 font-size: 1.6rem;
                 color: $marine-blue;
                 text-decoration: none;
+            }
+        }
+    }
+    @include media-min("desktop-up") {
+        h2 {
+            display: none;
+        }
+        .social-media {
+            display: flex;
+            width: 500px;
+            flex-wrap: wrap;
+            gap: 50px 50px;
+            a {
+                flex-basis: 45%;
             }
         }
     }

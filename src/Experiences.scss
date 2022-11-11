@@ -44,22 +44,25 @@ $breakpoints: (
             }
             img.desktop {
                 display: block;
+                height: auto;
+                width: 45vw;
             }
-            width: 45vw;
+            max-width: 45vw;
             height: 200px;
             margin: 50px auto;
-            transition: max-width 2s;
+            transition: width 2s;
             &.step1 {
                 max-height: none;
-                max-width: 33%;
+                //max-width: 33%;
+                width: calc(45vw*0.33);
                 overflow: hidden;
             }
             &.step2 {
-                max-width: 66%;
+                width: calc(45vw*0.66);
                 overflow: hidden;
             }
             &.step3 {
-                max-width: 100%;
+                width: calc(45vw*1);
                 overflow: hidden;
             }
         }
@@ -127,9 +130,27 @@ $breakpoints: (
             color: $very-lght-blue;
             background-color: $dark-blue;
         }
+        @include media-min("desktop-up") {
+            width: 40%;
+        }
+    }
+    .card-container {
+        @include media-min("desktop-up") {
+            display: flex;
+            flex-wrap: wrap;
+        }
     }
     .card {
         margin: 20px auto;
+        @include media-min("desktop-up") {
+            flex-basis: 60%;
+            &:first-of-type {
+                flex-basis: 30%;
+            }
+            &:last-of-type {
+                flex-basis: 95%;
+            }
+        }
         h3 {
             text-transform: uppercase;
             color: $dark-blue;
@@ -177,6 +198,9 @@ $breakpoints: (
                 width: 0px;
                 height: 0px;
                 overflow: hidden;
+                @include media-min("desktop-up") {
+                    display: none;
+                }
             }
             .mysql .gauge {
                 height: 60%;

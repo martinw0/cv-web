@@ -20,28 +20,30 @@
 }
 @media screen and (min-width: 1024px) {
   .content.experiences .img-container {
-    width: 45vw;
+    max-width: 45vw;
     height: 200px;
     margin: 50px auto;
-    transition: max-width 2s;
+    transition: width 2s;
   }
   .content.experiences .img-container img.mobile {
     display: none;
   }
   .content.experiences .img-container img.desktop {
     display: block;
+    height: auto;
+    width: 45vw;
   }
   .content.experiences .img-container.step1 {
     max-height: none;
-    max-width: 33%;
+    width: 14.85vw;
     overflow: hidden;
   }
   .content.experiences .img-container.step2 {
-    max-width: 66%;
+    width: 29.7vw;
     overflow: hidden;
   }
   .content.experiences .img-container.step3 {
-    max-width: 100%;
+    width: 45vw;
     overflow: hidden;
   }
 }
@@ -109,8 +111,30 @@
   color: #F4FBFE;
   background-color: #161430;
 }
+@media screen and (min-width: 1024px) {
+  .content.experiences .buttons {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .content.experiences .card-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .content.experiences .card {
   margin: 20px auto;
+}
+@media screen and (min-width: 1024px) {
+  .content.experiences .card {
+    flex-basis: 60%;
+  }
+  .content.experiences .card:first-of-type {
+    flex-basis: 30%;
+  }
+  .content.experiences .card:last-of-type {
+    flex-basis: 95%;
+  }
 }
 .content.experiences .card h3 {
   text-transform: uppercase;
@@ -160,6 +184,11 @@
   width: 0px;
   height: 0px;
   overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+  .content.experiences .card .graph .break {
+    display: none;
+  }
 }
 .content.experiences .card .graph .mysql .gauge {
   height: 60%;
