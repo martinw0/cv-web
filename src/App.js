@@ -70,7 +70,7 @@ function App() {
           <div className="profile-picture"></div>
           <ul>
             <li>
-              <p className="years-number">25</p>
+              <p className="years-number">26</p>
               <div>
                 <p className="years-category">{t("my_age")}</p>
                 <p className="years-text">{t("years")}</p>
